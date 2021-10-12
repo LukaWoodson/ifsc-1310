@@ -1,14 +1,37 @@
 /*CSS-Demo Stylesheet*/
 
+
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
 body{
     font-family: 'Nunito Sans', sans-serif;
+    margin:0;
+}
+
+header.primary{
+  background:#3EDEBC;
+  text-align: center;
+  color:#ffffff;
+  text-shadow:2px 2px #000000;
+  padding: 40px;
+    
 }
 
 /*
 Color Scheme Blue to Seafoam:
-#4690FA
-#3EA9DE
-#52EBF5
-#3EDEBC
-#46FAA1
+#4690FA -----turquoise
+#3EA9DE -----turquoise/seafoam
+#52EBF5 -----seafoam
+#3EDEBC -----green
+#46FAA1 -----bright green
 */
