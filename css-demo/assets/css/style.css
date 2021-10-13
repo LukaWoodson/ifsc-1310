@@ -1,5 +1,14 @@
 /*CSS-Demo Stylesheet*/
 
+/*
+Color Scheme Blue to Seafoam:
+#4690FA -----turquoise
+#3EA9DE -----turquoise/seafoam
+#52EBF5 -----seafoam
+#3EDEBC -----green
+#46FAA1 -----bright green
+*/
+
 
 /* ---------------Box Sizing----------------- */
 
@@ -12,6 +21,20 @@ html {
   box-sizing: inherit;
 }
 
+/* ---------------Responsive Images----------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------Utility Classes----------------- */
+
+.container{
+  width:70vw;
+  margin: 40px auto;
+  max-width: 960px;
+}
+
 
 body{
     font-family: 'Nunito Sans', sans-serif;
@@ -22,16 +45,120 @@ header.primary{
   background:#3EDEBC;
   text-align: center;
   color:#ffffff;
-  text-shadow:2px 2px #000000;
+  text-shadow:-2px 2px #000000;
   padding: 40px;
     
 }
 
-/*
-Color Scheme Blue to Seafoam:
-#4690FA -----turquoise
-#3EA9DE -----turquoise/seafoam
-#52EBF5 -----seafoam
-#3EDEBC -----green
-#46FAA1 -----bright green
-*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+header.primary h1 {
+  font-size: 2.9rem;
+  margin: 20px 0;
+}
+
+header.primary h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header.primary h2 {
+  font-size: 1.8rem;
+  /* Top | Left/Right | Bottom */
+  margin: 20px auto 40px;
+}
+
+header.primary nav {
+  width: 80vw;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+header.primary nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header.primary nav ul li {
+  list-style-type: none;
+}
+
+header.primary nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #3EDEBC;
+  background-color: rgba(0, 20, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+header.primary nav a:hover,
+header.primary nav a:active {
+  background-color: rgba(0, 80, 0, 0.8);
+}
+
+#intro{
+  border-bottom: 5px solid #3EDEBC;
+  padding-bottom: 1.2rem
+}
+
+#intro h2{
+  display: inline-block;
+  color: #4690FA;
+  border-bottom: 2px solid #3EA9DE;
+  
+}
+
+#intro p{
+
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Media Query Example */
+
+@media screen and (max-width:700px) {
+   header.primary nav ul{
+  display:flex;
+  flex-direction:column; 
+  justify-content:space-around; 
+  margin:0 auto; 
+  width: 60vw;
+  }
+  
+  header.primary nav a{
+    display:block;
+  }
+  
+  header.primary nav li{
+    margin-bottom:10px;
+  }
+
+  
+  
+  
+  
+}
+
