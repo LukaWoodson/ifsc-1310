@@ -1,0 +1,66 @@
+/* STYLE SHEET FOR PROTOTYPE */
+
+
+
+/*
+Color Scheme Seafoam to Green:
+#1A5E50 -----dark green
+#84E3CF -----light seafoam
+#3EDEBC -----seafoam
+#375E56 -----dark dull green
+#30AB90 -----medium green
+*/
+
+
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    margin:0;
+    line-height: 1.2;
+    background: #BCE6D7;
+}
+
+header.primary{
+  background:#375E56;
+  color:#ffffff;
+  text-shadow:-2px 2px #000000;
+  padding: 40px;
+}
+
+#home-button{
+  display: flex;
+  justify-content: flex-start;
+}
+
+#home-button a{
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #30AB90;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#home-button a:hover,
+#home-button a:active{
+    background-color: rgba(0, 80, 0, 1);
+}
+
+header.primary h1 {
+  font-size: 5rem;
+  /* T, R, B, L */
+  margin: 20px 40px 50px 40px;
+  text-align: center;
+}
