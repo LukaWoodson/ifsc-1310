@@ -1,4 +1,4 @@
-/*      STYLE SHEET FOR HOMEPAGE        */
+/*  STYLE SHEET FOR FLEXBOX FROGGY  */
 
 /*
 Color Scheme Seafoam to Green:
@@ -21,9 +21,17 @@ html {
   box-sizing: inherit;
 }
 
+/* ---------------Responsive Images----------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 body{
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 14pt;
     margin:0;
     line-height: 1.2;
     background: #BCE6D7;
@@ -63,55 +71,18 @@ header.primary h1 {
   text-align: center;
 }
 
-header.primary h2{
-  font-size: 2rem;
-        /* T/B, R/L */
-  margin: 20px auto;
-  text-align: center;
-}
-
 #main{
   width:70vw;
   margin: 40px auto;
   max-width: 960px;
 }
 
-#h2 {
-  font-size: 3rem;
-  /* Top/Bottom | Left/Right */
-  margin: 1rem 1rem;
+p{
+    margin-bottom: 2rem;
+}
+
+figcaption{
+  padding-top: 1rem;
   color: #375E56;
-  text-shadow: -2px 2px 2px #000000;
-  text-align: left;
-  display: inline-block;
-  border-bottom: 2px solid #1A5E50;
-}
-
-#list {
-  padding: 2rem;
-  margin-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#list li {
-  list-style-type: none;
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
-}
-
-#list li a {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #3EDEBC;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: 0.5s;
-}
-
-#list a:hover,
-#list a:active {
-  background-color: rgba(0, 80, 0, 0.8);
+  text-shadow: -1.5px 2px 2px #1A5E50;
 }
