@@ -1,5 +1,14 @@
 /*      STYLE SHEET FOR HOMEPAGE        */
 
+/*
+Color Scheme Seafoam to Green:
+#1A5E50 -----dark green
+#84E3CF -----light seafoam
+#3EDEBC -----seafoam
+#375E56 -----dark dull green
+#30AB90 -----medium green
+*/
+
 
 /* ---------------Box Sizing----------------- */
 
@@ -13,14 +22,15 @@ html {
 }
 
 
-
 body{
     font-family: 'Nunito Sans', sans-serif;
     margin:0;
+    line-height: 1.2;
+    background: #BCE6D7;
 }
 
 header.primary{
-  background:#3EDEBC;
+  background:#375E56;
   color:#ffffff;
   text-shadow:-2px 2px #000000;
   padding: 40px;
@@ -35,7 +45,7 @@ header.primary{
 #home-button a{
   color: #ffffff;
   text-decoration: none;
-  background-color: #3EDEBC;
+  background-color: #30AB90;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 8px 16px;
   border-radius: 20px;
@@ -44,39 +54,48 @@ header.primary{
 
 #home-button a:hover,
 #home-button a:active{
-    background-color: rgba(0, 80, 0, 0.8);
+    background-color: rgba(0, 80, 0, 1);
 }
 
 header.primary h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   /* T, R, B, L */
   margin: 20px 40px 50px 40px;
   text-align: center;
 }
 
-header.primary h2 {
-  font-size: 2rem;
-  /* Top | Left/Right | Bottom */
-  margin: 20px auto 2px;
-  display: inline-block;
-  border-bottom: 2px solid #ffffff;
+#main{
+  width:70vw;
+  margin: 40px auto;
+  max-width: 960px;
 }
 
-ol {
-  padding: 3rem;
+#h2 {
+  font-size: 3rem;
+  /* Top/Bottom | Left/Right */
+  margin: 1rem 1rem;
+  color: #535755;
+  text-shadow: -2px 2px #ffffff;
+  text-align: left;
+  display: inline-block;
+  border-bottom: 2px solid #535755;
+}
+
+#list {
+  padding: 2rem;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
 }
 
-ol li {
+#list li {
   list-style-type: none;
   margin-bottom: 2rem;
   font-size: 1.25rem;
 }
 
-ol li a {
+#list li a {
   color: #ffffff;
   text-decoration: none;
   background-color: #3EDEBC;
@@ -86,7 +105,7 @@ ol li a {
   transition: 0.5s;
 }
 
-ol a:hover,
-ol a:active {
+#list a:hover,
+#list a:active {
   background-color: rgba(0, 80, 0, 0.8);
 }

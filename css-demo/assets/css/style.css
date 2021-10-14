@@ -1,12 +1,12 @@
 /*CSS-Demo Stylesheet*/
 
 /*
-Color Scheme Blue to Seafoam:
-#4690FA -----turquoise
-#3EA9DE -----turquoise/seafoam
-#52EBF5 -----seafoam
-#3EDEBC -----green
-#46FAA1 -----bright green
+Color Scheme Seafoam to Green:
+#1A5E50 -----dark green
+#84E3CF -----light seafoam
+#3EDEBC -----seafoam
+#375E56 -----dark dull green
+#30AB90 -----medium green
 */
 
 
@@ -40,10 +40,11 @@ body{
     font-family: 'Nunito Sans', sans-serif;
     margin:0;
     line-height: 1.2;
+    background: #BCE6D7;
 }
 
 header.primary{
-  background:#3EDEBC;
+  background:#375E56;
   text-align: center;
   color:#ffffff;
   text-shadow:-2px 2px #000000;
@@ -126,8 +127,9 @@ header.primary nav a:active {
 
 #intro h2{
   display: inline-block;
-  color: #4690FA;
-  border-bottom: 2px solid #3EA9DE;
+  color: #535755;
+  text-shadow: -2px 2px #ffffff;
+  border-bottom: 2px solid #535755;
   
 }
 
@@ -143,7 +145,7 @@ header.primary nav a:active {
 
 /* Media Query Example */
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:585px) {
    header.primary nav ul{
   display:flex;
   flex-direction:column; 
