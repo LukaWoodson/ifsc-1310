@@ -39,6 +39,7 @@ img {
 body{
     font-family: 'Nunito Sans', sans-serif;
     margin:0;
+    line-height: 1.2;
 }
 
 header.primary{
@@ -48,23 +49,6 @@ header.primary{
   text-shadow:-2px 2px #000000;
   padding: 40px;
     
-}
-
-
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-
-body {
-  font-family: "Nunito Sans", sans-serif;
-  margin: 0;
-  line-height: 1.2;
 }
 
 header.primary h1 {
