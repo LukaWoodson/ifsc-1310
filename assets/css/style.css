@@ -21,31 +21,72 @@ body{
 
 header.primary{
   background:#3EDEBC;
-  text-align: center;
   color:#ffffff;
   text-shadow:-2px 2px #000000;
   padding: 40px;
     
 }
 
-header.primary h1 {
-  font-size: 2.9rem;
-  margin: 20px 0;
+#home-button{
+  display: flex;
+  justify-content: flex-start;
 }
 
-header.primary h1 a {
+#home-button a{
   color: #ffffff;
   text-decoration: none;
+  background-color: #3EDEBC;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#home-button a:hover,
+#home-button a:active{
+    background-color: rgba(0, 80, 0, 0.8);
+}
+
+header.primary h1 {
+  font-size: 3rem;
+  /* T, R, B, L */
+  margin: 20px 40px 50px 40px;
+  text-align: center;
 }
 
 header.primary h2 {
   font-size: 2rem;
   /* Top | Left/Right | Bottom */
-  margin: 20px auto 40px;
+  margin: 20px auto 2px;
   display: inline-block;
   border-bottom: 2px solid #ffffff;
 }
 
 ol {
-  
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ol li {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+ol li a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #3EDEBC;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+ol a:hover,
+ol a:active {
+  background-color: rgba(0, 80, 0, 0.8);
 }
