@@ -1,0 +1,51 @@
+/*      STYLE SHEET FOR HOMEPAGE        */
+
+
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    margin:0;
+}
+
+header.primary{
+  background:#3EDEBC;
+  text-align: center;
+  color:#ffffff;
+  text-shadow:-2px 2px #000000;
+  padding: 40px;
+    
+}
+
+header.primary h1 {
+  font-size: 2.9rem;
+  margin: 20px 0;
+}
+
+header.primary h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header.primary h2 {
+  font-size: 2rem;
+  /* Top | Left/Right | Bottom */
+  margin: 20px auto 40px;
+  display: inline-block;
+  border-bottom: 2px solid #ffffff;
+}
+
+ol {
+  
+}
