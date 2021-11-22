@@ -1,0 +1,120 @@
+/*
+ul - #2D1E2F
+ul link - #6A706E
+container background - #eee
+
+
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+header.primary{
+    width: 100%;
+    height: auto;
+    background: rgb(45,30,47);
+    background: linear-gradient(0deg, rgba(45,30,47,1) 30%, rgba(45,30,47,0.7) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+header.primary::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+
+header.primary h1{
+    font-size: 3rem;
+    margin: 20px 0;
+    position: relative;
+}
+
+header.primary h1 a{
+  color: #2D1E2F;
+  background-image: url("../img/segway_logo.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 620px;
+  height: 150px;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+header nav{
+    margin-top: auto;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #2D1E2F;
+    padding: 0.75rem 0;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    background-color: #6A706E;
+    color: #eee;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+}
+
+#container{
+    max-width: 50%;
+    background-color: #eee;
+    /*top/bottom   right/left*/
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+footer{
+    background-color: #2D1E2F;
+    padding-top: 0.5rem;
+    width: 100%;
+}
+
+footer nav{
+    
+}
+
+footer nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer nav ul li{
+    margin-bottom: 0.5rem;
+}
+
+footer nav ul li a{
+    color: #eee;
+    text-decoration: none;
+}
+
+footer h6{
+    color: #eee;
+    text-align: center;
+}
+
+footer h6 a{
+    color: #eee;
+}
