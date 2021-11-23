@@ -146,9 +146,9 @@ body{
 }
 
 .container h3{
-    margin: 1rem 0;
+    margin: 3rem 0 0.5rem;
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: #533857;
 }
 
@@ -188,6 +188,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
   border-bottom: 1px solid #c0c0c0;
   padding: 0 0 4em 0;
@@ -259,7 +260,26 @@ img {
   list-style-image: url("../img/arrow-icon.png");
 }
 
+.hide1,
+.hide2,
+.hide3,
+.hide4{
+  display: none;
+}
 
+.articleButton{
+  border: none;
+  background-color: rgba(107, 72, 112, 0.8);
+  color: #eee;
+  border-radius: 7px;
+  box-shadow: -3px 3px 8px rgb(0, 0, 0, 0.5);
+  float: right;
+}
+
+.articleButton:hover{
+  background-color: rgba(163, 118, 167, 0.8);
+  box-shadow: -5px 5px 12px rgb(0, 0, 0, 0.8);
+}
 
 /* ------------- FAQ --------------- */
 .faq{
