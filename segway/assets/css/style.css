@@ -15,6 +15,30 @@ html {
     font-family: "Lato", sans-serif;
 }
 
+/* ----- Utility Styles ---- */
+.img-right {
+  float: right;
+  margin: 10px 0 10px 20px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+.img-left {
+  float: left;
+  margin: 10px 20px 10px 0;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+.img-center {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+
+/* ------------- Header --------------- */
 header.primary{
     width: 100%;
     height: auto;
@@ -56,14 +80,20 @@ header.primary nav{
     margin-top: auto;
 }
 
-header.primary nav ul{
-    list-style: none;
-    display: flex;
-    max-width: 70%;
-    margin: 0 auto;
-    justify-content: space-between;
-    background-color: #2D1E2F;
-    padding: 0.75rem 0;
+header.primary nav ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+header.primary nav li {
+  list-style-type: none;
+  padding: 0;
+  width: 20%;
 }
 
 header.primary nav a:link,
@@ -73,6 +103,7 @@ header.primary nav a:visited {
     background-color: rgba(106, 112, 110, 0.5);
     color: #eee;
     padding: 0.5rem 2.5rem;
+    text-align: center;
     border-radius: 0.75rem;
     transition: 0.4s;
     display: block;
@@ -83,6 +114,8 @@ header.primary nav a:active {
   background-color: rgba(107, 72, 112, 0.8);
 }
 
+
+/* ------------- Body --------------- */
 body{
     display: flex;
     flex-direction: column;
@@ -90,11 +123,11 @@ body{
     background-color: #eee;
 }
 
-.container{
-    max-width: 70%;
-    /*top/bottom   right/left*/
-    margin: 1rem auto;
-    padding: 1rem;
+.container {
+  width: 80vw;
+  margin: 40px auto;
+  max-width: 70%;
+  padding: 1rem;
 }
 
 .container h2{
@@ -114,6 +147,110 @@ body{
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     color: #533857;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------- Hero --------------- */
+
+#hero{
+  padding: 1.5rem 0;
+  border-radius: 10px;
+}
+
+#hero img{
+  border-radius: 10px;
+  background-color: #6A706E;
+}
+
+#hero figcaption {
+  flex: 0 0 100%;
+  color: #533857;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+}
+
+
+/* ------------- Articles --------------- */
+
+#articles {
+  background: #C0C4C2;
+}
+
+#articles .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #c0c0c0;
+  padding: 0 0 4em 0;
+}
+
+#articles h2,
+#content h2 {
+  flex: 0 0 100%;
+  color: #533857;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+
+#articles h2 {
+  text-align: center;
+  color: #533857;
+  text-shadow: 2px -2px #000;
+  font-size: 4rem;
+}
+
+#articles article.post {
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  transition: 0.6s;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  background: #f5f5f5;
+  margin: 0.5rem 0;
+}
+
+#articles article.post h2 {
+  font-size: 1.5em;
+  text-shadow: none;
+}
+
+#articles article.post:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#articles article time,
+#articles article figcaption,
+#articles article footer {
+  font-size: 0.8em;
+  color: #c0c0c0;
+  text-transform: uppercase;
+}
+
+#articles .post a:link,
+#articles .post a:visited {
+  color: #533857;
+  font-family: 'Oswald', sans-serif;
+}
+
+#articles .post figure {
+  margin: 0;
+}
+
+#articles .post img {
+  border-radius: 10px;
+}
+
+#articles ul {
+  padding: 0 20px;
+}
+#articles li {
+  margin-bottom: 20px;
 }
 
 
@@ -156,4 +293,50 @@ footer h6{
 
 footer h6 a{
     color: #eee;
+}
+
+
+
+/* ---------------Media Queries----------------- */
+@media screen and (max-width: 600px) {
+  header.primary nav ul {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  header.primary nav ul li {
+    margin-bottom: 10px;
+    width: 400px;
+  }
+
+  header.primary nav ul li a {
+    display: block;
+  }
+
+ #articles .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 0 0 4em 0;
+  }
+
+  #articles article.post {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  
+  aside .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+  
+  aside article.widget, aside article.widget table{
+  width: 100%;
+}
+  
+  
 }
