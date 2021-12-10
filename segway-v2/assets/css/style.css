@@ -57,7 +57,7 @@ header.primary h1{
 
 header.primary h1 a{
   color: #2D1E2F;
-  background-image: url("../img/segway_logo.png");
+  background-image: url("../img/segway_logo.gif");
   background-repeat: no-repeat;
   display: block;
   width: 650px;
@@ -188,7 +188,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
   border-bottom: 1px solid #c0c0c0;
   padding: 0 0 4em 0;
@@ -209,6 +209,9 @@ img {
 }
 
 #articles article.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 20%;
   box-shadow: -3px 5px 20px rgba(0, 0, 0, 0.4);
   padding: 10px;
@@ -273,13 +276,51 @@ img {
   color: #eee;
   border-radius: 7px;
   box-shadow: -3px 3px 8px rgb(0, 0, 0, 0.5);
-  float: right;
 }
 
 .articleButton:hover{
   background-color: rgba(163, 118, 167, 0.8);
   box-shadow: -5px 5px 12px rgb(0, 0, 0, 0.8);
 }
+
+/*----------Article Pop Up------------*/
+
+.fadedBackground{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgb(94,92,94, 0.6);
+}
+
+.newWindow{
+  position: fixed;
+  left: 25%;
+  bottom: 25%;
+  max-width: 50%;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: -3px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tempArticle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tempList{
+  display: block;
+  
+}
+
+.newWindowButton{
+  margin-left: 95%;
+  margin-top: 10px;
+  content: '\274c';
+}
+
+
+
 
 /* ------------- FAQ --------------- */
 .faq{
