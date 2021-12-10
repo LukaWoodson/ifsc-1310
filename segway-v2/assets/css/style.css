@@ -158,24 +158,6 @@ img {
   box-shadow: -5px 5px 10px #6A706E;
 }
 
-/* ------------- Hero --------------- */
-
-#hero{
-  padding: 0;
-  border-radius: 10px;
-}
-
-#hero img{
-  border-radius: 10px;
-  background-color: #6A706E;
-}
-
-#hero figcaption {
-  flex: 0 0 100%;
-  color: #533857;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
-}
 
 
 /* ------------- Articles --------------- */
@@ -255,6 +237,55 @@ img {
   box-shadow: none;
 }
 
+
+
+
+/* ------------- Hero --------------- */
+
+#hero{
+  padding: 0;
+  border-radius: 10px;
+}
+
+#hero img{
+  border-radius: 10px;
+  background-color: #6A706E;
+}
+
+#hero figcaption {
+  flex: 0 0 100%;
+  color: #533857;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+}
+
+#hero h2{
+  margin: 1rem 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.75rem;
+  color: #533857;
+}
+
+#hero blockquote {
+  background: #f5f5f5;
+  padding: 15px 15px;
+  margin: 1rem;
+  border: 5px solid rgba(107, 72, 112, 0.8);
+  border-radius: 20px;
+  font-size: 1.2em;
+  color: #666666;
+  box-shadow: -5px 7px 20px rgba(0, 0, 0, 0.4);
+}
+
+#hero blockquote cite{
+  display: block;
+  text-align: right;
+  /*color: #533857;*/
+  color: #A0A6A4;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 0.5rem;  
+}
 
 
 
