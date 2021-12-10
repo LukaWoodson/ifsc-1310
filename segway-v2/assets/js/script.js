@@ -31,6 +31,7 @@ function handleClick(event) {
     //add button to the new windowElement
     windowElement.appendChild(xButton);
     
+    
     //add html element from document to windowElement
     const articleElementCopy = articleElement.cloneNode(true);
     articleElementCopy.classList.add('tempArticle');    //add a tempArticle class for styling
