@@ -10,9 +10,6 @@ function handleClick(event) {
     //add class to div for faded solid color in front of all page elements but behind new windowElement
     fadedBackground.classList.add('fadedBackground');
 
-    //disable all page buttons not on new windowElement
-    disableButtons(true);
-
     let button = event.path[0]; //path is an array, place 0 is the button in this case
     let idNum = button.id.replace(/^\D+/g, ''); //takes id as a string and only grabs the number
 
@@ -48,20 +45,12 @@ function handleClick(event) {
 function handleClose(event) {
     //remove fadedBackground class when closing new windowElement
     fadedBackground.classList.remove('fadedBackground');
-    //re-enable page buttons
-    disableButtons(false);
+
     //delete the new windowElement created in the html
     let deleteElements = document.getElementsByClassName('newWindow');
     //loop through any element that has the newWindow class to close it off screen
     for (let idx = deleteElements.length - 1; idx >= 0; --idx) {
         deleteElements[idx].remove();
-    }
-}
-
-//make page buttons unclickable when pop up article window is open
-function disableButtons(bool) {
-    for (let articleButton of articleButtons) {
-        articleButton.disabled = bool;
     }
 }
 
@@ -74,7 +63,8 @@ for (let articleButton of articleButtons) {
     articleButton.addEventListener('click', handleClick);
 }
 
-
+//listen for click on fadedBackground
+fadedBackground.addEventListener('click', handleClose);
 
 
 
@@ -99,10 +89,10 @@ questions.forEach((question) => {
     //listen for a click on a faq question
     opener.addEventListener('click', () => {
         
-        //filter through array of questions to see which one was actually clicked
-        [...questions].filter(q => q !== question).forEach(q => q.classList.remove('opened'))
+        //spread and then filter through array of questions to see which one was actually clicked
+        [...questions].filter(q => q !== question).forEach(q => q.classList.remove('opened'));
         
         //toggle opened so drop down will open and close
-        question.classList.toggle('opened')
+        question.classList.toggle('opened');
     });  
 });
