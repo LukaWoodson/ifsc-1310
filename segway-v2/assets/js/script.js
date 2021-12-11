@@ -3,7 +3,7 @@ const articleButtons = document.getElementsByClassName('articleButton');  //all 
 const fadedBackground = document.getElementById('faded');  //div at the end of html document for dimming page elements
 
 
-//--------------------------FUNCTIONS---------------------------------
+//--------------------------HOME PAGE FUNCTIONS---------------------------------
 
 function handleClick(event) {
     
@@ -66,10 +66,55 @@ function disableButtons(bool){
 }
 
 
-//--------------------------LISTENER LOOP---------------------------------
+//--------------------------HOME PAGE LISTENER LOOP---------------------------------
 
 
 //listen for a click on a button with the class articleButton
 for(let articleButton of articleButtons){    
     articleButton.addEventListener('click', handleClick);
 }
+
+
+
+
+
+
+
+
+//-----------------------------FAQ FUNCTIONS-----------------------------------
+
+
+
+// function faq(event) {
+//     console.log(QandA);
+//     console.log(QandA.length);
+//     console.log(event);
+    
+//     let click = event.path[1]; //path is an array, place 1 is the #QandA tag in this case
+//     let idNum = click.id.replace( /^\D+/g, ''); //takes id as a string and only grabs the number
+//     const questions = document.getElementsByName(`info${idNum}`);
+    
+    
+    
+// }
+
+
+
+
+//--------------------------FAQ LISTENER LOOP---------------------------------
+
+//listen for a click on a faq question
+// for (let faqClick of QandA){
+
+const questions = document.querySelectorAll('.QandA');
+
+questions.forEach((question) => {
+    
+    const opener = question.querySelector('h3');
+    opener.addEventListener('click', () => {
+        // Array.from(question)
+    [...questions].filter(q => q !== question).forEach(q => q.classList.remove('opened'))
+    
+    question.classList.toggle('opened')
+    });
+});

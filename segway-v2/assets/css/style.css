@@ -381,7 +381,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .newWindow{
   max-width: 60%;
-  height: 80%;
+  height: 90%;
   overflow: auto;
   margin: auto;
   position: fixed;
@@ -458,49 +458,62 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
 }
 
-details {
-    border: 1px solid #aaa;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    padding: 0.5rem 0.5rem 0;
-    margin: 0.5rem;
-    width: 35vw;
+#content .faq h2{
+  font-size: 5em;
 }
 
-summary {
-    cursor: pointer;
-    margin: -0.5em -0.5em 0;
-    padding: 0.5em;
-    border-radius: 10px;
-    list-style: none;
-    background-color: #C0C4C2;
+.QandA {
+  width: 35vw;
+  display: flex;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin: 0.5rem;
+  background-color: #f5f5f5;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: -5px 5px 5px #6A706E;
 }
 
-summary::-webkit-details-marker {
-  display: none; 
+.QandA #question{
+  width: 100%;
 }
 
-details summary::before { 
-  content: url("../img/faq-arrow-icon.png"); 
+.QandA #faqHeader{
+  width: 100%;
+  background-color: #C0C4C2;
+  border-radius: 10px;
+  padding: 1rem 1rem 2rem;
 }
 
-details[open] summary::before { 
-  content: url("../img/faq-arrow-icon-down.png");
+.QandA h3 {
+  cursor: pointer;
+  display: inline;
+  font-weight: bold;
+  font-size: 35px;
+  
 }
 
-details summary > * {
+.QandA .info {
+  display: none;
+  font-size: 18px;
+  width: 100%;
+  padding: 1em;
+  background-color: #f5f5f5;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.QandA.opened .info {
+  margin-top: 1rem;
+  display: block;
+}
+
+.QandA #status {
+  content: url("../img/faq-arrow-icon.gif");
+  transition: 0.5s;
   display: inline;
 }
 
-details[open] {
-    padding: 0.5em;
-    /* offset-x | offset-y | blur-radius | color */
-    box-shadow: -5px 5px 5px #6A706E;
-}
-
-details[open] summary {
-    border-bottom: 1px solid #aaa;
-    margin-bottom: 0.5em;
+.QandA.opened #status {
+  transform: rotate(90deg);
 }
 
 .disclaimer h4{
@@ -513,6 +526,10 @@ details[open] summary {
 .disclaimer p{
    font-size: 0.8rem;
 }
+
+
+
+
 
 /* ------------- Footer --------------- */
 footer{
