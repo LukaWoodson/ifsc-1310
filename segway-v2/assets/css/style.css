@@ -498,7 +498,11 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   padding: 1em;
   background-color: #f5f5f5;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px;
+}
+
+.QandA.opened #faqHeader{
+  box-shadow: -5px 5px 5px #6A706E;
 }
 
 .QandA.opened .info {
@@ -508,12 +512,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 .QandA #status {
   content: url("../img/faq-arrow-icon.gif");
-  transition: 0.5s;
   display: inline;
+  transform: rotate(0deg);
+  transition: transform 0.35s;
 }
 
 .QandA.opened #status {
   transform: rotate(90deg);
+  transition: transform 0.35s;
 }
 
 .disclaimer h4{
