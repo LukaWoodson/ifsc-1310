@@ -45,7 +45,8 @@ function handleClick(event) {
 function handleClose(event) {
     //remove fadedBackground class when closing new windowElement
     fadedBackground.classList.remove('fadedBackground');
-
+    //re-enable page buttons
+    //disableButtons(false);
     //delete the new windowElement created in the html
     let deleteElements = document.getElementsByClassName('newWindow');
     //loop through any element that has the newWindow class to close it off screen
@@ -63,14 +64,11 @@ for (let articleButton of articleButtons) {
     articleButton.addEventListener('click', handleClick);
 }
 
-//listen for click on fadedBackground
-fadedBackground.addEventListener('click', handleClose);
+if(fadedBackground){
+    //listen for click on fadedBackground
+    fadedBackground.addEventListener('click', handleClose);
+}
 
-
-
-
-
-//-----------------------------FAQ FUNCTIONS-----------------------------------
 
 
 
@@ -81,16 +79,19 @@ fadedBackground.addEventListener('click', handleClose);
 const questions = document.querySelectorAll('.QandA');
 
 
-questions.forEach((question) => {
+questions.forEach(function (question) {
     
     //set which piece of the question tag is the click opener/closer
     const opener = question.querySelector('h3');
     
     //listen for a click on a faq question
-    opener.addEventListener('click', () => {
+    opener.addEventListener('click', function () {
         
-        //spread and then filter through array of questions to see which one was actually clicked
-        [...questions].filter(q => q !== question).forEach(q => q.classList.remove('opened'));
+        //spread questions into array and then filter through questions that weren't clicked
+       const otherQuestions =  [...questions].filter(q => q !== question);
+       
+       //loop through otherQuestions array and remove .opened
+       otherQuestions.forEach(q => q.classList.remove('opened'));
         
         //toggle opened so drop down will open and close
         question.classList.toggle('opened');
